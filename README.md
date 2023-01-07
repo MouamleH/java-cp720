@@ -1,12 +1,13 @@
-# Java Cp720
+[![](https://jitpack.io/v/MouamleH/java-cp720.svg)](https://jitpack.io/#MouamleH/java-cp720)
+# Java [Cp720](https://en.wikipedia.org/wiki/Code_page_720)
 
-Cp720 Codepage (AKA: DOS-720, AKA: Arabic (Transparent ASMO), AKA: Arabic (DOS)) charset implementation
+Cp720 Codepage (AKA: DOS-720, AKA: Arabic (Transparent ASMO), AKA: Arabic (DOS)) charset implementation for Java
 
 ## Usage
 
 ### Encoding
 ```java
-String arabicText="أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ";
+String arabicText = "أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ";
 byte[] bytes = arabicText.getBytes(Cp720Charset.INSTANCE);
 
 // Signed
@@ -22,3 +23,8 @@ byte[] Cp720String = {-102, -96, -92, -89, 32, -20, -19, -86, 32, -91, -31, -17,
 String arabicString = new String(Cp720String, Cp720Charset.INSTANCE);
 // arabicString => أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ
 ```
+
+### References
+- https://en.wikipedia.org/wiki/Code_page_720
+- https://learn.microsoft.com/en-us/windows/win32/intl/code-page-identifiers
+- https://github.com/python/cpython/blob/main/Lib/encodings/cp720.py
